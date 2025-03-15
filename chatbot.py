@@ -18,9 +18,9 @@ def get_response(user_input):
     elif re.search(r'order status|track order', user_input, re.IGNORECASE):
         return "Please provide your order ID to track your order."
     elif re.search(r'products|catalog|items', user_input, re.IGNORECASE):
-        return "We offer a wide range of products including electronics, clothing, and accessories."
+        return "We offer a wide range of products regarding board games, card games, and puzzles. Do you have a specific product in mind?"
     elif re.search(r'return|refund|exchange', user_input, re.IGNORECASE):
-        return "For returns and refunds, please visit our return policy page or contact customer support."
+        return "For returns and refunds, please visit our return policy page or contact customer support by our e-mail address."
     else:
         return "I'm here to help! Could you be more specific?"
 
