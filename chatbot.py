@@ -89,7 +89,7 @@ def get_response(user_input, lang='pl'):
             return "Którym produktem jesteś zainteresowany/a? Możesz podać nazwę lub identyfikator produktu."
         elif re.search(r'płatność|zakup|gotówka|zapłać', user_input, re.IGNORECASE):
             return "Akceptujemy wszystkie główne karty płatnicze (w tym Google Pay/Apple Pay) oraz PayPal. Możesz również wybrać opcję płatności za pobraniem."
-        elif re.search(r'wysyłka|dostawa', user_input, re.IGNORECASE):
+        elif re.search(r'wysyłka|dostawa|dostawy|paczka', user_input, re.IGNORECASE):
             return "Oferujemy standardową i ekspresową wysyłkę do domu lub punktu odbioru. Podaj adres, aby sprawdzić czas dostawy i koszty."
         elif re.search(r'międzynarodowa', user_input, re.IGNORECASE):
             return "Oferujemy wysyłkę międzynarodową do większości krajów w Europie, Ameryce Północnej i Ameryce Łacińskiej. Podaj adres, aby sprawdzić czas dostawy i koszty."
@@ -117,7 +117,7 @@ def get_response(user_input, lang='pl'):
             return "Oferujemy szeroki wybór gier planszowych, karcianych i puzzli. Czy masz na myśli konkretny produkt?"
         elif re.search(r'zwrot|reklamacja|wymiana', user_input, re.IGNORECASE):
             return "Aby dowiedzieć się więcej o zwrotach i reklamacjach, odwiedź naszą stronę dotyczącą polityki zwrotów lub skontaktuj się z obsługą klienta."
-        elif re.search(r'człowiek|konsultant', user_input, re.IGNORECASE):
+        elif re.search(r'człowiek|konsultant|człowiekiem', user_input, re.IGNORECASE):
             return "Jestem asystentem chatbotem. Chętnie Ci pomogę! Jeśli chcesz porozmawiać z człowiekiem, skontaktuj się z naszą obsługą klienta przez e-mail lub telefon."
         else:
             return "Jestem tutaj, aby pomóc! Czy możesz sprecyzować swoje pytanie?"
