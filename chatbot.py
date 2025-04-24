@@ -8,8 +8,8 @@ from langdetect import detect, DetectorFactory
 DetectorFactory.seed = 0
 
 # Configure API for the first chatbot
-API_URL = 'st.secrets["API_URL"]'
-API_TOKEN = 'st.secrets["API_TOKEN"]'
+API_URL = st.secrets["API_URL"]
+API_TOKEN = st.secrets["API_TOKEN"]
 
 # Functions for the Langflow API chatbot
 def call_api(user_query):
