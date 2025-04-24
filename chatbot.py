@@ -24,7 +24,7 @@ def call_api(user_query):
     }
     
     try:
-        response = requests.post(API_URL, json=payload, headers=headers, timeout=60)
+        response = requests.post(API_URL, json=payload, headers=headers, timeout=180)
         response.raise_for_status()
         return response.text
     except requests.exceptions.RequestException as e:
