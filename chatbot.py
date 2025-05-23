@@ -168,28 +168,28 @@ if "conversation_history" not in st.session_state:
     st.session_state.conversation_history = []
 
 # App layout
-st.title("Dual Chatbot System")
-st.write("Ask a question to get responses from both chatbots!")
+st.title("Praca licencjacka - Chatboty")
+st.write("Zadaj pytanie poniżej!")
 
 # Display conversation history
 for message in st.session_state.conversation_history:
-    st.markdown(f"**You**: {message['user']}")
+    st.markdown(f"**Ty**: {message['user']}")
     
     # Display both bot responses in columns
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("### Langflow Bot")
+        st.markdown("### Chatbot 1")
         st.markdown(f"{message['langflow_bot']}")
     with col2:
-        st.markdown("### Classic Bot")
+        st.markdown("### Chatbot 2")
         st.markdown(f"{message['classic_bot']}")
     
     st.markdown("---")
 
 # Input form
 with st.form(key='unified_chat_form', clear_on_submit=True):
-    user_input = st.text_input("Your question:", key="user_input_field")
-    submit_button = st.form_submit_button("Send")
+    user_input = st.text_input("Twoje pytanie:", key="user_input_field")
+    submit_button = st.form_submit_button("Wyślij")
 
 # Process the form submission
 if submit_button and user_input:
