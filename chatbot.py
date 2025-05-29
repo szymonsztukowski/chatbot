@@ -120,6 +120,8 @@ def get_response(user_input):
             return "Dziękujemy za odwiedzenie nas. Miłego dnia!"
         elif re.search(r'pomoc|wsparcie', user_input, re.IGNORECASE):
             return "Mogę pomóc w kwestiach związanych z informacjami o produktach, śledzeniem zamówień i obsługą klienta."
+        elif re.search(r'hej|cześć|dzień dobry', user_input, re.IGNORECASE):
+            return "Cześć! Sprawy, w których mogę Ci pomóc to: wybór produktu, cena, gwarancja, zwroty, płatności, dostawa - wystarczy, że zadasz pytanie!"
         elif re.search(r'status zamówienia|śledź zamówienie', user_input, re.IGNORECASE):
             return "Podaj numer zamówienia, aby je śledzić."
         elif re.search(r'zamówienie', user_input, re.IGNORECASE):
@@ -158,6 +160,32 @@ def get_response(user_input):
             return "Aby dowiedzieć się więcej o zwrotach i reklamacjach, odwiedź naszą stronę dotyczącą polityki zwrotów lub skontaktuj się z obsługą klienta."
         elif re.search(r'człowiek|konsultant|człowiekiem', user_input, re.IGNORECASE):
             return "Jestem asystentem chatbotem. Chętnie Ci pomogę! Jeśli chcesz porozmawiać z człowiekiem, skontaktuj się z naszą obsługą klienta przez e-mail lub telefon."
+        elif re.search(r'jakie gry|strategiczne|planszowe|polecacie', user_input, re.IGNORECASE):
+            return "Polecamy następujące gry strategiczne z naszej oferty: Scythe - rozbudowana strategia z kontrolą terytorium, ekonomią i walką. \n Twilight Imperium - epicka gra kosmiczna z polityką, eksploracją i bitewnością. \n Nemesis: Lockdown - asymetryczna gra z ukrytymi celami i napięciem."
+        elif re.search(r'jakie gry rodzinne|gry rodzinne', user_input, re.IGNORECASE):
+            return "Oto kilka polecanych gier dla rodzin z naszej oferty: Dixit – kreatywna i pięknie ilustrowana gra skojarzeń. \n Wsiąść do Pociągu: Europa – łatwa do nauczenia, idealna dla dzieci i dorosłych. \n Catan – klasyk o handlu i budowie z prostymi zasadami. \n  Monopoly – znana gra ekonomiczna dla całej rodziny. \n Everdell – bajkowy świat z prostym worker placementem, który dzieci też zrozumieją."
+        elif re.search(r'jakie gry ekonomiczne|gry euro', user_input, re.IGNORECASE):
+            return "Polecamy te gry z naszej oferty oparte na planowaniu, zarządzaniu i małej losowości: Ark Nova – duża strategia ekonomiczna z planowaniem kart. \n Iki – klasyczne euro z interesującym mechanizmem ruchu po planszy. \n Catan – prostsza gra ekonomiczna z handlem i budową."
+        elif re.search(r'scythe|Scythe', user_input, re.IGNORECASE):
+            return "Cena w naszym sklepie: 299 zł. \n Gra strategiczna osadzona w alternatywnej Europie, łącząca ekonomię, kontrolę terytorium i rozwój frakcji. Gracze wykonują akcje: produkcja, ruch, walka i budowa."
+        elif re.search(r'Catan|Catan', user_input, re.IGNORECASE):
+            return "Cena w naszym sklepie: 149 zł. \n Gracze zbierają surowce, budują drogi, osady i miasta. Celem jest zdobycie 10 punktów zwycięstwa. Istotną rolę odgrywa handel między graczami."
+        elif re.search(r'dixit|Dixit', user_input, re.IGNORECASE):
+            return "Cena w naszym sklepie: 129 zł. \n Gracze opowiadają skojarzenia do ilustracji na kartach, a inni próbują odgadnąć, o którą kartę chodzi. Gra opiera się na wyobraźni i kreatywności."
+        elif re.search(r'Monopoly|monopoly', user_input, re.IGNORECASE):
+            return "Cena w naszym sklepie: 109 zł. \n Gracze kupują i rozwijają nieruchomości, pobierają czynsze i dążą do bankructwa przeciwników. Zwycięża ostatni gracz, który nie zbankrutował."
+        elif re.search(r'everdell|Everdell', user_input, re.IGNORECASE):
+            return "Cena w naszym sklepie: 229 zł. \n Gra typu worker placement i budowanie tableau. Gracze zarządzają zasobami, wystawiają budynki i postacie, rozwijając swoje leśne miasto."
+        elif re.search(r'wsiąść do pociągu|europa|Europa|Wsiąść do pociągu', user_input, re.IGNORECASE):
+            return "Cena w naszym sklepie: 179 zł. \n Gracze zbierają karty wagonów i budują połączenia kolejowe między miastami Europy. Punkty zdobywa się za długość tras i realizację biletów."
+        elif re.search(r'Nemesis: Lockdown|nemesis|lockdown|Nemesis', user_input, re.IGNORECASE):
+            return "Cena w naszym sklepie: 379 zł. \n Semi-kooperacyjna gra sci-fi z ukrytymi celami. Gracze eksplorują bazę na Marsie, walczą z obcymi i próbują przetrwać. Możliwa zdrada graczy."
+        elif re.search(r'Ark Nova|ark nova', user_input, re.IGNORECASE):
+            return "Cena w naszym sklepie: 269 zł. \n Gracze projektują nowoczesne zoo. Gra oparta na kartach, zarządzaniu projektami, sponsorami i zwierzętami. Cel to zdobycie jak największej reputacji i dobrostanu."
+        elif re.search(r'Iki|iki', user_input, re.IGNORECASE):
+            return "Cena w naszym sklepie: 179 zł. \n Gra euro osadzona w japońskim Edo. Gracze zatrudniają rzemieślników, planują zakupy na targu i rozwijają swoją reputację. Ważne jest zarządzanie ruchem po planszy."
+        elif re.search(r'Twilight Imperium|Twilight', user_input, re.IGNORECASE):
+            return "Cena w naszym sklepie: 699 zł. \n Epicka gra strategiczna 4X. Gracze budują imperia, eksplorują kosmos, prowadzą wojny i głosują nad prawami. Gra pełna polityki i negocjacji – trwa wiele godzin."
         else:
             return "Jestem tutaj, aby pomóc! Czy możesz sprecyzować swoje pytanie?"
     else:
@@ -168,7 +196,7 @@ if "conversation_history" not in st.session_state:
     st.session_state.conversation_history = []
 
 # App layout
-st.title("Praca licencjacka - Chatboty")
+st.title("Projekt licencjacki - chatboty")
 st.write("Zadaj pytanie poniżej!")
 
 # Display conversation history
