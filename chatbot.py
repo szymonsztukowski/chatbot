@@ -196,7 +196,7 @@ if "conversation_history" not in st.session_state:
     st.session_state.conversation_history = []
 
 # App layout
-st.title("Projekt licencjacki - chatboty")
+st.title("Chatboty jako wsparcie obsługi klienta w serwisach e-commerce")
 st.write("Zadaj pytanie poniżej!")
 
 # Display conversation history
