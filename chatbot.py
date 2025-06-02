@@ -121,7 +121,7 @@ def get_response(user_input):
         elif re.search(r'pomoc|wsparcie', user_input, re.IGNORECASE):
             return "Mogę pomóc w kwestiach związanych z informacjami o produktach, śledzeniem zamówień i obsługą klienta."
         elif re.search(r'hej|cześć|dzień dobry', user_input, re.IGNORECASE):
-            return "Cześć! Który produkt Cię interesuje? Możesz podać nazwę lub identyfikator produktu: /n Scythe /n Catan /n Dixit /n Monopoly /n Everdell /n Wsiąść do Pociągu: Europa /n Nemesis /n Ark Nova /n Iki /n Twilight Imperium"
+            return "Cześć! Który produkt Cię interesuje? Możesz podać nazwę lub identyfikator produktu: \n Scythe \n Catan \n Dixit \n Monopoly \n Everdell \n Wsiąść do Pociągu: Europa \n Nemesis \n Ark Nova \n Iki \n Twilight Imperium"
         elif re.search(r'status zamówienia|śledź zamówienie', user_input, re.IGNORECASE):
             return "Podaj numer zamówienia, aby je śledzić."
         elif re.search(r'zamówienie', user_input, re.IGNORECASE):
